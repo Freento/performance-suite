@@ -1,0 +1,45 @@
+<!-- ko if: hasInstalledModules() -->
+<table class="modules-table">
+    <caption><h3 data-bind="i18n: 'Installed Modules'"></h3></caption>
+    <thead>
+        <tr>
+            <th data-bind="i18n: 'Module Name'"></th>
+            <th data-bind="i18n: 'Installed version'"></th>
+            <th data-bind="i18n: 'Available version'"></th>
+            <th data-bind="i18n: 'Description'"></th>
+            <th data-bind="i18n: 'Link'"></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: getInstalledModules()">
+        <tr>
+            <td data-bind="text: $data.composer_name"></td>
+            <td data-bind="text: $data.installed_version"></td>
+            <td data-bind="text: $data.available_version"></td>
+            <td data-bind="text: $data.description"></td>
+            <td><a data-bind="attr: { href: $data.link }, text: $data.link" target="_blank"></a></td>
+        </tr>
+    </tbody>
+</table>
+<!--/ko-->
+
+<!-- ko if: hasAvailableModules() -->
+<table class="modules-table">
+    <caption><h3 data-bind="i18n: 'Available Modules'"></h3></caption>
+    <thead>
+    <tr>
+        <th data-bind="i18n: 'Module Name'"></th>
+        <th data-bind="i18n: 'Available version'"></th>
+        <th data-bind="i18n: 'Description'"></th>
+        <th data-bind="i18n: 'Link'"></th>
+    </tr>
+    </thead>
+    <tbody data-bind="foreach: getAvailableModules()">
+    <tr>
+        <td data-bind="text: $data.composer_name"></td>
+        <td data-bind="text: $data.available_version"></td>
+        <td data-bind="text: $data.description"></td>
+        <td><a data-bind="attr: { href: $data.link }, text: $data.link" target="_blank"></a></td>
+    </tr>
+    </tbody>
+</table>
+<!--/ko-->

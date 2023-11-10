@@ -1,0 +1,26 @@
+<?php
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \Magento\Backend\Block\Template $block */
+
+$scope = 'freento-performance_suite-dasboard-modules_list';
+$url = $block->getUrl('freento_performancesuite/modulelist/get');
+?>
+
+<div id="modules-list" data-bind="scope: '<?= $scope ?>'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#modules-list": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "<?= $scope ?>": {
+                        "component": "Freento_PerformanceSuite/js/dashboard/modules_list",
+                        "ajaxUrl": "<?= $url ?>"
+                    }
+                }
+            }
+        }
+    }
+</script>

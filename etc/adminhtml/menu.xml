@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Freento_PerformanceSuite::fps"
+             title="FPS"
+             module="Freento_PerformanceSuite"
+             resource="Freento_PerformanceSuite::fps"
+             sortOrder="100"/>
+        <add id="Freento_PerformanceSuite::performance_suite"
+             title="Freento Performance Suite"
+             module="Freento_PerformanceSuite"
+             resource="Freento_PerformanceSuite::performance_suite"
+             parent="Freento_PerformanceSuite::fps"/>
+        <add id="Freento_PerformanceSuite::fps_dashboard"
+             title="Dashboard"
+             translate="title"
+             module="Freento_PerformanceSuite"
+             parent="Freento_PerformanceSuite::performance_suite"
+             sortOrder="100"
+             action="freento_performancesuite"
+             resource="Freento_PerformanceSuite::fps_dashboard"/>
+    </menu>
+</config>
