@@ -2,9 +2,9 @@
     "name": "freento/performance-suite",
     "description": "Freento Performance Suite configuration module",
     "type": "magento2-module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "require": {
-        "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+        "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
     },
     "autoload": {
         "files": [
